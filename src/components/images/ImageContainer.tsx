@@ -137,11 +137,20 @@ const ImageCol = ({ images }: Images) => {
     <>
       {images.map((image: any, index: number) => {
         return (
-          <img
-            src={image.urls.regular}
-            width={imageSizes.regular}
-            height={getNewHeight(image.width, image.height, imageSizes.regular)}
-          />
+          <div className="relative rounded-xl overflow-hidden">
+            <div className="absolute top-0 left-0 px-3 py-3 w-full h-full opacity-0 hover:opacity-100 hover:bg-gradient-to-b from-zinc-800/30 via-transparent to-zinc-800/30">
+              {image.user.name}
+            </div>
+            <img
+              src={image.urls.regular}
+              width={imageSizes.regular}
+              height={getNewHeight(
+                image.width,
+                image.height,
+                imageSizes.regular
+              )}
+            />
+          </div>
         );
       })}
     </>
