@@ -31,12 +31,9 @@ const Home: NextPage<props> = ({ fetchedImages }) => {
         <Container>
           <Navbar />
         </Container>
-        <div className="bg-white py-10">
-          <Container>
-            <SearchGroup />
-            {/* <PopoverBar /> */}
-          </Container>
-        </div>
+        <Container className="my-8">
+          <SearchGroup />
+        </Container>
         <Container>
           <ImageContainer initialImages={fetchedImages} />
         </Container>

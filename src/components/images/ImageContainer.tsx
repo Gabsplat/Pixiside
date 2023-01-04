@@ -139,7 +139,7 @@ const ImageCol = ({ images }: Images) => {
         return (
           <div className="relative rounded-xl overflow-hidden">
             <div className="absolute top-0 left-0 px-3 py-3 w-full h-full opacity-0 hover:opacity-100 hover:bg-gradient-to-b from-zinc-800/30 via-transparent to-zinc-800/30">
-              {image.user.name}
+              <span className="font-bold">{image.user.name}</span>
             </div>
             <img
               src={image.urls.regular}
